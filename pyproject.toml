@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embodiedmind"
+version = "0.1.0"
+description = "Multi-agent perception-planning-execution closed-loop system for embodied AI"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.23",
+  "pydantic>=2.0",
+  "pyyaml>=6.0",
+  "rich>=13.0",
+  "pillow>=9.0"
+]
+
+[project.optional-dependencies]
+vision = ["opencv-python>=4.7"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["embodiedmind*"]

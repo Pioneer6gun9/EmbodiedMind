@@ -1,0 +1,30 @@
+seed: 42
+env:
+  backend: tabletop
+  workspace:
+    xlim: [-0.45, 0.45]
+    ylim: [-0.30, 0.30]
+    z_table: 0.0
+  robot:
+    reach_radius: 0.55
+    gripper_width: 0.08
+    action_noise: 0.012
+    placement_noise: 0.018
+agents:
+  perception:
+    model: color_segmentation
+    confidence_threshold: 0.65
+    temporal_smoothing: 3
+  planner:
+    max_steps: 8
+    strategy: symbolic_pick_place
+  critic:
+    check_reachability: true
+    check_collision: true
+    min_object_confidence: 0.65
+  reflection:
+    max_replans: 3
+    failure_window: 2
+logging:
+  level: INFO
+  save_jsonl: true

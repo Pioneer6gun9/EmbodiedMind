@@ -1,0 +1,15 @@
+perception_agent:
+  input: observation
+  output: world_state
+planner_agent:
+  input: [task, world_state]
+  output: plan
+critic_agent:
+  input: [action, world_state]
+  output: validation
+action_agent:
+  input: validated_action
+  output: execution_result
+reflection_agent:
+  input: [failure, world_state, plan_trace]
+  output: revised_plan

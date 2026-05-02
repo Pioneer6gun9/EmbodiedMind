@@ -1,0 +1,56 @@
+{
+  "id": "red_block_blue_box",
+  "language_instruction": "Place the red block into the blue box.",
+  "objects": [
+    {
+      "id": "red_block",
+      "type": "block",
+      "color": "red",
+      "size": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "initial_pose": [
+        -0.18,
+        0.08,
+        0.02
+      ]
+    },
+    {
+      "id": "blue_box",
+      "type": "container",
+      "color": "blue",
+      "size": [
+        0.12,
+        0.12,
+        0.06
+      ],
+      "initial_pose": [
+        0.2,
+        -0.04,
+        0.03
+      ]
+    },
+    {
+      "id": "obstacle",
+      "type": "cylinder",
+      "color": "gray",
+      "size": [
+        0.05,
+        0.05,
+        0.1
+      ],
+      "initial_pose": [
+        0.02,
+        0.02,
+        0.05
+      ]
+    }
+  ],
+  "goal": {
+    "predicate": "inside",
+    "object": "red_block",
+    "target": "blue_box"
+  }
+}
